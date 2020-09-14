@@ -27,10 +27,12 @@ public class RepositorioRest {
 		return servicoDeRepositorio.buscarRepositorios(query, page, pageSize);
 	}
 	
-	@GetMapping("/repository/{loginUsuario}/{nomeRepositorio}")
+	
+	//Enviado nome do repositório por query param, porque se ele começar com "." não chegava. Ex: facebook/.github
+	@GetMapping("/repository/{loginUsuario}")
 	public RepositorioDTO buscaRepositorio(
 		@PathVariable(value = "loginUsuario") String loginUsuario,
-		@PathVariable(value = "nomeRepositorio") String nomeRepositorio
+		@RequestParam(value = "repository") String nomeRepositorio
 	) {
 		return servicoDeRepositorio.buscarRepositorio(loginUsuario, nomeRepositorio);
 	}
