@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.searchgithubrepositories.api.dto.RepositorioDTO;
+import br.com.searchgithubrepositories.api.dto.UsuarioDTO;
 import br.com.searchgithubrepositories.api.service.IServicoDeUsuario;
 
 @RestController
@@ -26,6 +27,11 @@ public class UsuarioRest {
 		@PathVariable(value = "loginUsuario") String loginUsuario
 	) {
 		return servicoDeUsuario.buscaUsuarioComRepositorios(loginUsuario, page, pageSize);
+	}
+
+	@GetMapping("/user/{loginUsuario}")
+	public UsuarioDTO buscaInformacoesDoUsuario(@PathVariable(value = "loginUsuario") String loginUsuario) {
+		return servicoDeUsuario.buscaInformacoesDoUsuario(loginUsuario);
 	}
 	
 }

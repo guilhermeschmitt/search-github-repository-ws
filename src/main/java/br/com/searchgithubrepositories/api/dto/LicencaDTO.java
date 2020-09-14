@@ -6,11 +6,8 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class UsuarioDTO {
+public class LicencaDTO {
 
-	private Long id;
-	private String login;
-	private Long public_repos;
-	private String avatar_url;
+	private String name;
 	
 }

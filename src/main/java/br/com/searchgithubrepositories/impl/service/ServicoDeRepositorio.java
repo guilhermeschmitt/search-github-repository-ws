@@ -14,7 +14,7 @@ import br.com.searchgithubrepositories.api.service.IServicoDeRepositorio;
 
 @Service
 public class ServicoDeRepositorio implements IServicoDeRepositorio {
-
+	
 	private final RestTemplate restTemplate;
 	private static final Logger log = LoggerFactory.getLogger(ServicoDeRepositorio.class);
 

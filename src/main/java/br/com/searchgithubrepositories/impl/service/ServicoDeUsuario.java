@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import br.com.searchgithubrepositories.api.dto.RepositorioDTO;
+import br.com.searchgithubrepositories.api.dto.UsuarioDTO;
 import br.com.searchgithubrepositories.api.service.IServicoDeUsuario;
 
 @Service
@@ -36,6 +37,14 @@ public class ServicoDeUsuario implements IServicoDeUsuario {
 		RepositorioDTO[] arrayDeRepositorios = restTemplate.getForEntity(reqPath, RepositorioDTO[].class).getBody();
 		
 		return Arrays.asList(arrayDeRepositorios);
+	}
+
+	@Override
+	public UsuarioDTO buscaInformacoesDoUsuario(String loginUsuario) {
+		String path = env.getProperty("github-api.path");
+		String reqPath = String.format("%s/users/%s", path, loginUsuario);
+		
+		return restTemplate.getForEntity(reqPath, UsuarioDTO.class).getBody();
 	}
 
 }
