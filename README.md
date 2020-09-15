@@ -17,9 +17,9 @@ Para rodar o backend localmente, você deve:
 	 - Busca informações do repositório informado.
 - ``/search-github-repositories/api/v1/repositories?query=:query&page=:page&pageSize=:pageSize``
 	- Retorna a lista de repositórios buscada a partir da query fornecida.
-- ``http://localhost:8080/search-github-repositories/api/v1/user/:userName/repositories?page=:page&pageSize=:pageSize``
+- ``/search-github-repositories/api/v1/user/:userName/repositories?page=:page&pageSize=:pageSize``
 	- Retorna a lista de repositórios do usuário.
-- ``http://localhost:8080/search-github-repositories/api/v1/user/:userName``
+- ``/search-github-repositories/api/v1/user/:userName``
 	- Retorna informações do usuário.
 
 ### Melhorias futuras
