@@ -1,6 +1,6 @@
 ### Rodando localmente
 
-Para rodar o backend localmente, você deve:
+Para rodar o backend utilizando o servidor imbutido do spring localmente, você deve:
 
  - Java 8 instalado
 	 - Variável de ambiente ``JAVA_HOME`` configurada
