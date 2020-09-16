@@ -7,6 +7,7 @@ Para rodar o backend utilizando o servidor imbutido do spring localmente, você 
 - [Plugin](https://maven.apache.org/download.cgi) do maven instalado
 	- Variável de ambiente ``MAVEN_HOME`` [configurada](https://i.stack.imgur.com/ibo5A.png)
 	- Path [configurado](https://i.stack.imgur.com/wl0eU.png)
+- [Lombok](https://projectlombok.org/) instalado
 - Clonar este repositório
 - Vá para a pasta clonada e:
 	- Execute o comando ``mvn spring-boot:run``
